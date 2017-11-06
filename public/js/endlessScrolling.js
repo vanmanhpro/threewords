@@ -24,16 +24,16 @@ function requestPage(){
 	const url = `/skip/${skip}`;
 	isLoading = true;
 
+	//display loading
+	document.querySelector('.content-loader').style.display = "block";
+
 	$.ajax({
 		url : url,
 		type: 'get'
 	}).then((data) => {
 		skip += data.length;
-		console.log(skip);
 		let grid = document.getElementsByClassName('portfolios-grid')[0];
 		for(let i = 0, n = data.length;i < n; i++){
-			console.log(data[i]);
-
 			let gridItem = document.createElement('div');
 			gridItem.className = 'portfolios-grid-item';
 
@@ -63,6 +63,7 @@ function requestPage(){
 		console.log(err);
 	}).always(() => {
 		isLoading = false;
+		document.querySelector('.loader').style.display = "none";
 	})
 }
 

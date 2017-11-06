@@ -22,7 +22,7 @@
 			</div>
 		</div>
 	</div> -->
-	<div class="loader">Loading...</div>
+	<div class="loader-wrapper content-loader"><div class="loader">Loading...</div></div>
 </div>
 
 <div class="screen-dim" id="open-picture-dim">
@@ -39,8 +39,10 @@
 			<div class="user-information-wrapper">
 				<div class="glance-information-wrapper">
 					<div id="owners-name"></div>
-					<!-- <div id="follow-button">Follow</div> -->
 				</div>
+			</div>
+			<div class="image-caption-wrapper">
+				<p id="image-caption"></p>
 			</div>
 			<div class="comment-section-wrapper">
 				<div class="interest-wrapper">
@@ -50,7 +52,7 @@
 				<div class="comments-wrapper">
 					<div class="write-comment-wrapper">
 						<div class="input-3-words">
-							<input id="input-3-words" type="text" placeholder="You have 3 words left">
+							<input id="input-3-words" type="text" placeholder="Write some words" maxlength="20">
 							<div class="send-comment" onclick="enterComment()"><span class="fa fa-paper-plane-o"></span></div>
 						</div>
 					</div>

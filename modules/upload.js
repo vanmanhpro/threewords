@@ -49,6 +49,7 @@ Router.post('/', (req, res) => {
                 let newImageURL = json.data.link;
                 let userId = req.body.userId;
                 let newImageData = {
+                    caption: req.body.caption,
                     ownerId: req.body.userId,
                     url: newImageURL
                 }

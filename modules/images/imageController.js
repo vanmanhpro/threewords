@@ -8,7 +8,8 @@ const addImage = (newImageData) => {
 	return new Promise(function(resolve, reject){
 		var newImage = new imageModel({
 			ownerId : newImageData.ownerId,
-			url : newImageData.url
+			url : newImageData.url,
+			caption : newImageData.caption
 		})
 
 		newImage.save( (err) => {

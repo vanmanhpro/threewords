@@ -17,12 +17,20 @@
 	display: flex;
 	flex-direction: column;
 }
-/*#choose-image{
-	border: 2px solid #ffa31a;
-	border-radius: 15px;
-	padding: 10px;
-	width: 200px;
-}*/
+#caption{
+	display: block;
+	width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    padding: 7px 20px 7px 20px;
+    transition: all 0.2s ease-in-out;
+    color: rgba(0, 0, 0, 0.9);
+    margin-bottom: 25px;
+}
+#caption:focus{
+	outline: none;
+	border: 1px solid #93ff00;
+}
 .submit-area > div{
 	background: none;
 	background-color: #ffa31a;

@@ -116,6 +116,7 @@ function removeWordFromImage(word){
 				updateImage(currentPicture)
 				.then((data) => {
 					currentPicture = data;
+					document.getElementById('comment-number').innerHTML = currentPicture.words.length;
 				});
 				break;
 			}

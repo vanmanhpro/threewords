@@ -41,6 +41,26 @@ function appendCommentsToBigPicture(){
 		}
 	}
 }
+function appendTopWords(){
+	for( let i = 0; i < Math.min(3, currentPicture.words.length); i++){
+		if(currentPicture.words[i]){
+			appendToTopWords(currentPicture.words[i]);
+			
+			colon = document.createElement('span');
+			colon.innerHTML = ',&nbsp';
+
+			if( i < Math.min(3, currentPicture.words.length) - 1){
+				topCommentContainer.appendChild(colon);
+			}
+		}
+	}
+}
+function appendToTopWords(word){
+	topComment = document.createElement('span');
+	topComment.className = 'instant-picture-beautiful-text';
+	topComment.innerHTML = word.content;
+	topCommentContainer.appendChild(topComment);
+}
 
 function checkAndAppendCommentToVoted(comment, word){
 	for(let i = 0, n = currentLog.threewords.length; i < n; i++){

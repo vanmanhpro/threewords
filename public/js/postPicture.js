@@ -3,6 +3,7 @@ let postButton = document.getElementById('post-button');
 let openPostPictureDim = document.getElementById('open-post-picture-dim');
 let postPictureForm = document.querySelector(".post-picture-form");
 let inputImage = document.getElementById('input-image');
+let inputCaption = document.getElementById('caption');
 let previewImage = document.getElementById('preview-image');
 
 function displayPostPictureByClick(){
@@ -24,6 +25,8 @@ function closePostPictureFormByClick(){
 // Close post picture
 function closePostPicture(){
 	openPostPictureDim.style.display = "none";
+	document.querySelector('.input-image-wrapper').style.display = "block";
+	document.querySelector('.submit-area').style.display = "block";
 	document.getElementsByTagName('body')[0].style.overflowY = "scroll";
 	previewImage.innerHTML = "<p>No files currently selected for upload</p>";
 	postPictureForm.reset();
@@ -57,13 +60,20 @@ inputImage.addEventListener('change', function (){
 
 function submitPicture(){
 	let inputPhoto = inputImage.files[0];
+	let caption = inputCaption.value;
 	if (!inputPhoto){
 			previewImage.innerHTML = "<p>Choose an image</p>";
 			return;
 		}
 
+	//loading photo
+	previewImage.innerHTML = `<div class="loader-wrapper image-loader" style="display: block"><div class="loader"></div></div>`;
+	document.querySelector('.input-image-wrapper').style.display = "none";
+	document.querySelector('.submit-area').style.display = "none";
+
 	var formData = new FormData();
     formData.append('photo', inputPhoto);
+    formData.append('caption', caption);
     formData.append('userId', currentUser.id);
 
 	let url = `/upload`;

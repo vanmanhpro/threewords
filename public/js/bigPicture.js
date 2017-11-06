@@ -105,6 +105,13 @@ function appendToImage(addedWord){
 	$.ajax({type: 'post', url: url, data: addedWord})
 	.done((data) => {
 		currentPicture = data;
+		document.getElementById('comment-number').innerHTML = currentPicture.words.length;
+		if (currentPicture.words.length <= 3) {
+			colon = document.createElement('span');
+			colon.innerHTML = ',&nbsp';
+			topCommentContainer.appendChild(colon);
+			appendToTopWords(addedWord);
+		}
 	});
 }
 
@@ -142,25 +149,11 @@ function openPictureByClick(portfolio, chosenUser){
 			//append picture
 			currentPicture = data;
 			document.getElementById('big-instant-picture-image').src = data.url;
+			if(currentPicture.caption) document.getElementById('image-caption').innerHTML = currentPicture.caption;
 			document.getElementById('comment-number').innerHTML = currentPicture.words.length;
 
 			//append top words
-			for( let i = 0; i < Math.min(3, currentPicture.words.length); i++){
-				if(currentPicture.words[i])
-				{
-					topComment = document.createElement('span');
-					topComment.className = 'instant-picture-beautiful-text';
-					topComment.innerHTML = currentPicture.words[i].content;
-
-					colon = document.createElement('span');
-					colon.innerHTML = ',&nbsp';
-
-					topCommentContainer.appendChild(topComment);
-					if( i < Math.min(3, currentPicture.words.length) - 1){
-						topCommentContainer.appendChild(colon);
-					}
-				}
-			}
+			appendTopWords();
 
 			//get user log about the picture
 			if (currentUser){

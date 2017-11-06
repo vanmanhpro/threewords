@@ -6,6 +6,10 @@ const ImageSchema = new Schema({
 		type: String,
 		require: true
 	},
+	caption:{
+		type: String,
+		default:""
+	},
 	url:{ 
 		type: String,
 		require: true
