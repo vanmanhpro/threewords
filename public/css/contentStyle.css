@@ -11,7 +11,12 @@
 .slogan-wrapper{
 }
 .slogan{
-	
+	font-size: 28px;
+	font-family: 'Dancing Script', cursive;
+	margin: 10px 0px 10px;
+}
+.slogan b{
+	font-family: inherit;
 }
 
 .portfolios-wrapper{
