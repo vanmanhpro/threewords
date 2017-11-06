@@ -1,0 +1,136 @@
+.content-wrapper{
+	display: flex;
+	flex-direction: column;
+	flex-basis: 1100px;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	top: 40px;
+}
+
+.slogan-wrapper{
+}
+.slogan{
+	
+}
+
+.portfolios-wrapper{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+.portfolios-grid{
+	display: block;
+	flex-basis: 1090px;
+}
+.portfolios-grid-item{
+	display: flex;
+	flex-direction: column;
+	width: 265px;
+	padding: 10px 10px 15px 10px;
+	box-shadow: 0px 4px 10px -4px rgba(0,0,0,0.4);
+	margin-bottom: 10px;
+	background-color: #f9f2f2;
+}
+.portfolios-grid-item:hover{
+	cursor: pointer;
+	background-color: #96bafd;
+}
+.portfolio-picture-wrapper{
+	width: 100%;	
+}
+.portfolio-picture-wrapper > img{
+	width: inherit;
+}
+.portfolio-picture-text{
+	display: flex;
+	justify-content: center;
+	margin-top: 10px;
+}
+.portfolio-picture-text p{
+	font-family: 'Dancing Script', cursive;
+	font-weight: bold;
+	font-size: 20px;
+	margin: 0;
+}	
+@media screen and (max-width: 1120px) {
+	.portfolios-grid{
+		flex-basis: 815px;
+	}		
+}
+@media screen and (max-width: 850px) {
+	.portfolios-grid{
+		flex-basis: 540px;
+	}		
+}
+@media screen and (max-width: 580px) {
+	.portfolios-grid{
+		flex-basis: 265px;
+	}		
+}
+@media screen and (max-width: 270px) {
+	.portfolios-grid-item{
+		width: 200px;
+	}
+}
+
+.loader,
+.loader:before,
+.loader:after {
+	display: block;
+	background: #ffa31a;
+	-webkit-animation: load1 1s infinite ease-in-out;
+	animation: load1 1s infinite ease-in-out;
+	width: 1em;
+	height: 4em;
+}
+.loader {
+	color: #ffa31a;
+	text-indent: -9999em;
+	margin: 88px auto;
+	position: relative;
+	font-size: 11px;
+	-webkit-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-animation-delay: -0.16s;
+	animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+	position: absolute;
+	top: 0;
+	content: '';
+}
+.loader:before {
+	left: -1.5em;
+	-webkit-animation-delay: -0.32s;
+	animation-delay: -0.32s;
+}
+.loader:after {
+	left: 1.5em;
+}
+@-webkit-keyframes load1 {
+	0%,
+	80%,
+	100% {
+		box-shadow: 0 0;
+		height: 4em;
+	}
+	40% {
+		box-shadow: 0 -2em;
+		height: 5em;
+	}
+}
+@keyframes load1 {
+	0%,
+	80%,
+	100% {
+		box-shadow: 0 0;
+		height: 4em;
+	}
+	40% {
+		box-shadow: 0 -2em;
+		height: 5em;
+	}
+}

@@ -1,0 +1,47 @@
+#open-post-picture-dim{
+	display: none;
+}
+.post-picture-form{
+	width: 500px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	left: 50%;
+	top:50%;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	background-color: #ffffff;
+	padding: 20px 20px;
+}
+.input-image-wrapper{
+	display: flex;
+	flex-direction: column;
+}
+/*#choose-image{
+	border: 2px solid #ffa31a;
+	border-radius: 15px;
+	padding: 10px;
+	width: 200px;
+}*/
+.submit-area > div{
+	background: none;
+	background-color: #ffa31a;
+	border: 2px solid #ffa31a;
+	border-radius: 10px;
+	color: #ffffff;
+	font-weight: bold;
+	padding: 5px 20px 5px 15px;
+}
+.submit-area > div:hover{
+	cursor: pointer;
+	background-color: #ffffff;
+	color: #ffa31a;
+}
+.preview-image{
+	margin: 20px 0px;
+	width: inherit;
+	text-align: center;
+}
+.preview-image img{
+	width: calc(100% - 30px);
+}
