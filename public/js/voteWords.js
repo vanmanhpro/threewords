@@ -16,7 +16,7 @@ function processClick(listeningWord, word){
 			upvote(listeningWord, word);
 			activate(listeningWord);
 		} else {
-			alert("out of words :)");
+			alert("Out of words :)");
 		}
 	} else {
 		unvote(listeningWord, word);
