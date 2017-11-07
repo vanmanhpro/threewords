@@ -34,14 +34,15 @@ function requestPage(){
 		skip += data.length;
 		let grid = document.getElementsByClassName('portfolios-grid')[0];
 		for(let i = 0, n = data.length;i < n; i++){
+			//	console.log(data[i])
 			let gridItem = document.createElement('div');
 			gridItem.className = 'portfolios-grid-item';
-
+			
 			let gridPictureWrapper = document.createElement('div');
 			gridPictureWrapper.className = 'portfolio-picture-wrapper';
 			let gridPicture = document.createElement('img');
 			gridPictureWrapper.appendChild(gridPicture);
-
+			
 			let gridPictureText = document.createElement('div');
 			gridPictureText.className = 'portfolio-picture-text';
 			let gridText = document.createElement('p');
@@ -50,9 +51,9 @@ function requestPage(){
 			
 			gridItem.appendChild(gridPictureWrapper);
 			gridItem.appendChild(gridPictureText);
-
+			
 			grid.appendChild(gridItem);
-
+			
 			gridPicture.src = data[i].smallURL;
 			gridPicture.onload = () => {
 				msnry.appended(gridItem);

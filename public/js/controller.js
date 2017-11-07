@@ -21,3 +21,5 @@ function displayProfileSettingByClick(){
 }
 displayProfileSettingByClick();
 
+// function goToUserPage()
+

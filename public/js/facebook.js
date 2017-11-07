@@ -22,7 +22,7 @@ function statusChangeCallback(response) {
 
   window.fbAsyncInit = function() {
   FB.init({
-    appId      : '1432090483505805',
+    appId      : '148233869245978',//1432090483505805
     cookie     : true,  // enable cookies to allow the server to access 
                         // the session
     xfbml      : true,  // parse social plugins on this page
@@ -62,10 +62,13 @@ function loginFB() {
     $.ajax({type:"post", url: "/user/createAccount", data: userInfo})
     .done((data) => {
       currentUser = data;
+      // console.log(currentUser);
       document.getElementById('open-sign-in-button').style.display = "none";
       document.getElementById('signed-in-wrapper').style.display = "flex";
       document.getElementById('profile-setting-avatar').src = currentUser.smallURL;
       document.getElementById("username").textContent = `${currentUser.name}`
+      document.getElementById("user-id").textContent = currentUser._id;
+      $("#username").attr("href", `/user/${currentUser._id}`)
       closeSignInDim();
     })
   });
@@ -82,3 +85,4 @@ function logoutFB() {
     currentLog = null;
   });
 }
+

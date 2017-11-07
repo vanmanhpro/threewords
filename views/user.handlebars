@@ -1,0 +1,71 @@
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Dancing+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Pacifico" rel="stylesheet">
+    <link rel="shortcut icon" href="img/logo3word.png" type="favicon/ico" />
+
+    <link rel="stylesheet" type="text/css" href="../css/menuStyle.css">
+    <link rel="stylesheet" type="text/css" href="../css/contentStyle.css">
+    <link rel="stylesheet" type="text/css" href="../css/loginStyle.css">
+    <link rel="stylesheet" type="text/css" href="../css/user.css">
+    <link rel="stylesheet" type="text/css" href="../css/openPictureStyle.css">
+    <link rel="stylesheet" type="text/css" href="../css/postPictureStyle.css">
+    <link rel="stylesheet" type="text/css" href="../css/notificationStyle.css">
+</head>
+{{!-- <h1 style="display: none">User page</h1> --}}
+	<div class="opened-picture-wrapper" id="link-to-share">
+		<div class="instant-picture-wrapper">
+			<div class="instant-picture">
+				<img id="big-instant-picture-image" src="{{{dataImage.url}}}">
+			</div>
+			<div class="instant-picture-beautiful-text-wrapper" id="top-comment-container">
+				<!-- <span class="instant-picture-beautiful-text"></span><span>, </span> -->
+			</div>
+		</div>
+		<div class="right-section-wrapper">
+			<div class="user-information-wrapper">
+				<div class="glance-information-wrapper">
+					<div id="owners-name"></div>
+				</div>
+			</div>
+			<div class="image-caption-wrapper">
+				<p id="image-caption">{{{dataImage.ownerId}}}</p>
+			</div>
+			<div class="comment-section-wrapper">
+				<div class="interest-wrapper">
+					<span class="fa fa-comment-o"></span>
+					<span id="comment-number">{{{dataImage.__v}}}</span>
+				</div>
+				<div class="comments-wrapper">
+					<div class="write-comment-wrapper">
+						<div class="input-3-words">
+							<input id="input-3-words" type="text" placeholder="Write some words" maxlength="20">
+							<div class="send-comment" onclick="enterComment()"><span class="fa fa-paper-plane-o"></span></div>
+						</div>
+					</div>
+					<div class="display-comments-wrapper" id="comments-container">
+						<!-- <div class="comment">
+							<span class="word">Word</span>
+							<div class="vote-count-display">
+								<span class="fa fa-heart-o"></span>
+								<span class="vote-number">12</span>
+							</div>
+						</div> -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <script type="text/javascript" src="../js/controller.js"></script>
+    <script type="text/javascript" src="../js/login.js"></script>
+    <script type="text/javascript" src="../js/userPage.js"></script>
+    <script type="text/javascript" src="../js/endlessScrolling.js"></script>
+    <script type="text/javascript" src="../js/facebook.js"></script>
+    <script type="text/javascript" src="../js/displayComment.js"></script>
+    <script type="text/javascript" src="../js/voteWords.js"></script>
+    <script type="text/javascript" src="../js/postPicture.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+	

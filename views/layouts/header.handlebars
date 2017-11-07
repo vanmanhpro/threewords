@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Three Words</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,28 +17,49 @@
 	<link rel="stylesheet" type="text/css" href="css/postPictureStyle.css">
 	<link rel="stylesheet" type="text/css" href="css/notificationStyle.css">
 </head>
+
 <body>
 	<div class="total-wrapper">
 		<div class="header-wrapper">
 			<div class="menu-wrapper">
 				<ul class="menu-list">
-					<li class="menu-option"><a class="active" href=""><span class="fa fa-home"></span><span class="menu-option-text">Home</span></a></li>
-					<li class="menu-option"><a class="" href=""><span class="fa fa-bell-o"></span><span class="menu-option-text">Notification</span></a></li>
+					<li class="menu-option">
+						<a class="active" href="">
+							<span class="fa fa-home"></span>
+							<span class="menu-option-text">Home</span>
+						</a>
+					</li>
+					<li class="menu-option">
+						<a class="" href="">
+							<span class="fa fa-bell-o"></span>
+							<span class="menu-option-text">Notification</span>
+						</a>
+					</li>
 				</ul>
 				<div class="brand-icon">
 					<img src="img/logo3word.png">
 				</div>
 				<div class="right-dock">
-					<div id="open-sign-in-button"><span class="fa fa-sign-in"></span><span class="menu-option-text">Sign In</span></div>
+					<div id="open-sign-in-button">
+						<span class="fa fa-sign-in"></span>
+						<span class="menu-option-text">Sign In</span>
+					</div>
 					<div id="signed-in-wrapper">
 						<div class="profile-setting-wrapper" id="profile-setting-wrapper">
-							<div class="profile-setting-avatar"><img id="profile-setting-avatar"></div>
+							<div class="profile-setting-avatar">
+								<img id="profile-setting-avatar">
+							</div>
 							<div class="profile-setting-dock" id="profile-setting-dock">
 								<div class="profile-setting-section">
-									<div class="profile-setting-username"><span id="username"></span></div>
+									<div class="profile-setting-username">
+										<a href="" id=username></a>
+										{{!-- <span id="username"></span> --}}
+									</div>
 								</div>
+								<div id="user-id" style="display:none"></div>
 								<div class="profile-setting-section">
-									<div class="profile-setting-option" onclick="logoutFB()"><span class="fa fa-sign-out"></span>Log out</div>
+									<div class="profile-setting-option" onclick="logoutFB()">
+										<span class="fa fa-sign-out"></span>Log out</div>
 								</div>
 							</div>
 						</div>
@@ -72,30 +94,32 @@
 		</div>
 		<div class="screen-dim" id="open-post-picture-dim">
 			<form class="post-picture-form">
-			  	<div class="input-image-wrapper">
-			    	<input id="caption" type="text" placeholder="Describe the photo..." maxlength="20">
-			    	<input id="input-image" type="file" accept=".jpg, .jpeg, .png">
-			  	</div>
-			  	<div class="preview-image" id="preview-image">
-			    	<p>No files currently selected for upload</p>
-			  	</div>
-			  	<div class="submit-area">
-			    	<div onclick="submitPicture()"><span class="fa fa-send">&nbsp</span>Submit</div>
-			  	</div>
+				<div class="input-image-wrapper">
+					<input id="caption" type="text" placeholder="Describe the photo..." maxlength="20">
+					<input id="input-image" type="file" accept=".jpg, .jpeg, .png">
+				</div>
+				<div class="preview-image" id="preview-image">
+					<p>No files currently selected for upload</p>
+				</div>
+				<div class="submit-area">
+					<div onclick="submitPicture()">
+						<span class="fa fa-send">&nbsp</span>Submit</div>
+				</div>
 			</form>
 		</div>
 	</div>
 	<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
-  	<script type="text/javascript" src="js/controller.js"></script>
-  	<script type="text/javascript" src="js/login.js"></script>
-  	<script type="text/javascript" src="js/bigPicture.js"></script>
-  	<script type="text/javascript" src="js/endlessScrolling.js"></script>
-  	<script type="text/javascript" src="js/facebook.js"></script>
-  	<script type="text/javascript" src="js/displayComment.js"></script>
-  	<script type="text/javascript" src="js/voteWords.js"></script>
-  	<script type="text/javascript" src="js/postPicture.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/controller.js"></script>
+	<script type="text/javascript" src="js/login.js"></script>
+	<script type="text/javascript" src="js/bigPicture.js"></script>
+	<script type="text/javascript" src="js/endlessScrolling.js"></script>
+	<script type="text/javascript" src="js/facebook.js"></script>
+	<script type="text/javascript" src="js/displayComment.js"></script>
+	<script type="text/javascript" src="js/voteWords.js"></script>
+	<script type="text/javascript" src="js/postPicture.js"></script>
 </body>
+
 </html>

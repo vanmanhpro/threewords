@@ -85,11 +85,21 @@ const getAll = () => {
 	});
 }
 
+const getUserById = (userID, callback)=>{
+	return new Promise(function (resolve, reject) {
+		userModel.findOne({"_id": objectId(userID)})
+		.exec((err, data)=>{
+			if(err) reject(err)
+			else resolve(data);
+		})
+	})
+}
 module.exports = {
 	createNewAccount,
 	getAll,
 	getPage,
 	checkExistAccount,
 	updateAccount,
-	updateAccountImage
+	updateAccountImage,
+	getUserById
 }
