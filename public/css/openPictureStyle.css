@@ -51,7 +51,7 @@
 }
 .instant-picture-beautiful-text:hover{
 	cursor: pointer;
-	color: rgba(212, 99, 232, 0.9);
+	color: rgba(212, 99, 232, 0.8);
 }
 .right-section-wrapper{
 	display: flex;
@@ -265,6 +265,6 @@
 		margin: 0;
 	}
 	.slogan{
-		font-size: 18px;
+		font-size: 21px;
 	}
 }

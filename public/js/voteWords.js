@@ -1,4 +1,5 @@
 let loading = false;
+
 function activate(wordElement){
 	wordElement.querySelector(".fa").className = "fa fa-heart";
 	wordElement.querySelector(".fa").style.color = "red";//"rgba(212, 99, 232, 0.9)";

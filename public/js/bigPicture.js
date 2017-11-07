@@ -1,5 +1,5 @@
 let input3words = document.getElementById('input-3-words');
-let currentPicture, currentLog, logInfo
+let currentPicture, currentLog, logInfo;
 
 // Comment trigger
 document.addEventListener('keydown', function(event){
